@@ -1,1 +1,24 @@
+server:
+  port: 8190
+  servlet:
+    context-path: /app
+    session:
+      timeout: 60m
 
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /db
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  jackson:
+    serialization:
+      indent_output: true
